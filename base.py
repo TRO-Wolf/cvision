@@ -27,6 +27,9 @@ def organize_data(image):
     data.rename(columns={0:"counts"}, inplace=True)
     data['Probability'] = data['counts'] / data['counts'].sum()
     data['Intensity'] = reduce(lambda x, y: x + y, data.index)
+    data['Equation 3'] = data['Probability'] * data['Intensity']
+    data['Mean'] = data['Equation 3'].sum()
+    data['Variance'] = ((data['Intensity'] - data['Mean'])**2) * data['Probability']
 
     return data
 
