@@ -2,3 +2,7 @@ One of the conclusions I came too was that images with low contrast appear to ha
 Another conlusion is that images with low contrast also have a small standard deviation
 This implies that images with low contrast appear to not divert from the mean very much and tend to be
 be stable if you will,  in their intensity levels.
+
+I'm not sure if this all was exactly what you were looking for or if my code even meets the criteria
+for a good grade but I hope it does. I think I have performed all of the requested actions in the 
+assignment
