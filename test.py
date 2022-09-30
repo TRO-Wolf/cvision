@@ -24,7 +24,7 @@ plt.suptitle("Adaptive thresholding", fontsize=14, fontweight='bold')
 fig.patch.set_facecolor('silver')
 
 # Load the image and convert it to grayscale:
-image = cv2.imread('colordog.png')
+image = cv2.imread('colordog.jpg')
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 # Perform adaptive thresholding with different parameters:
