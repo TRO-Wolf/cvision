@@ -16,6 +16,8 @@ highcon_img = cv.imread("highcontrast.jpeg")
 
 im_list = [gray_img, color_img, lowcon_img, highcon_img]
 
+
+
 def reshape_image(image):
     return image.reshape(-1, 1)
 
@@ -29,6 +31,7 @@ def main_program():
 
     #question 2
     for i in im_list:
+        new_image = cv.cvtColor(i, cv.COLOR_BGR2RGB)
         base_image_data = reshape_image(i)
         data = pd.DataFrame(base_image_data)
         data.rename(columns={0:"Intensity"}, inplace=True)
@@ -74,7 +77,7 @@ def main_program():
 
         print("     ")
 
-        plt.imshow(i)
+        plt.imshow(new_image)
         plt.show()
 
 
