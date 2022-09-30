@@ -59,6 +59,7 @@ def main_program():
         #Pandas has a function that allows you to get the skew, vairance and kurtosis of a data set
         # all in a few simple commands
         mean_intensity = data['Intensity'].mean()
+        std_dev = data['Intensity'].std()
         skew = data['Intensity'].skew()
         variance = data['Intensity'].var()
         kurtosis = data['Intensity'].kurtosis()
@@ -66,6 +67,7 @@ def main_program():
 
         print("The image {}".format(i))
         print("This image has an mean intensity of {}".format(mean_intensity))
+        print("The Image has a standard deviation of {}".format(std_dev))
         print("This image has a skew of {}".format(skew))
         print("This image has a variance of {}".format(variance))
         print("This image has a kurtosis of {}".format(kurtosis))

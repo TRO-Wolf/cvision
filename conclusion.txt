@@ -1,0 +1,4 @@
+One of the conclusions I came too was that images with low contrast appear to have a low variance
+Another conlusion is that images with low contrast also have a small standard deviation
+This implies that images with low contrast appear to not divert from the mean very much and tend to be
+be stable if you will,  in their intensity levels.
