@@ -38,14 +38,18 @@ def main_program():
 
         #here I created a pandas dataframe based on the numpy array called base_image_data
         #I used the value counts function to calculate the total amount of each pixel in the data set
-        
+
         pixel_counts = data.value_counts()
         pixel_counts.sort_index(inplace=True)
-        pixel_counts.rename(columns={0:"counts"}, inplace=True)
+        #pixel_counts.rename(columns={0:"counts"}, inplace=True)
 
         #To get the probability I took the values counts data and divided by the total sum
         #as provided by the formulas in the assignemt. The total sum of Probabilites is 1
-        pixel_counts['Probability'] = pixel_counts['counts'] / pixel_counts['counts'].sum()
+
+        data2 = pd.DataFrame(pixel_counts)
+
+        data2.rename(columns={0:"counts"}, inplace=True)
+        data2['Probability'] = data2['counts'] / data2['counts'].sum()
 
 
 
@@ -55,12 +59,14 @@ def main_program():
         #Pandas has a function that allows you to get the skew, vairance and kurtosis of a data set
         # all in a few simple commands
         skew = data['Intensity'].skew()
-        variance = data['Variance'].var()
-        kurtosis = data['Variance'].kurtosis()
+        variance = data['Intensity'].var()
+        kurtosis = data['Intensity'].kurtosis()
 
         print("This image has a skew of {}".format(skew))
         print("This image has a variance of {}".format(variance))
         print("This image has a kurtosis of {}".format(kurtosis))
+
+        print("     ")
 
         plt.imshow(i)
         plt.show()
